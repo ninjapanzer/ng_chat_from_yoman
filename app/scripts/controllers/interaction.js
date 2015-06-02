@@ -8,10 +8,6 @@
  * Controller of the ngChatApp
  */
 angular.module('ngChatApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('InteractionCtrl', function ($scope) {
+    $scope.awesomeThings = [];
   });
