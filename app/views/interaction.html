@@ -87,6 +87,12 @@
 </div>
 
 <div class="interaction--body">
-  HI
+  <div ng-repeat="interaction in user.interactions">
+    Interaction #{{interaction.id}} with {{interaction.recipient.name}}
+    <div ng-repeat="thread in interaction.threads">
+      Thread #{{thread.id}} has {{thread.messages.length}} message(s)
+      <div ng-repeat="message in thread.messages">User <b>{{user.name}}</b> said: {{message.message}} to <b>{{message.recipient.name}}</b></div>
+    </div>
+  </div>
 </div>
 </div>
