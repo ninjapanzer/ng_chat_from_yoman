@@ -7,7 +7,9 @@
  * # AboutCtrl
  * Controller of the ngChatApp
  */
+
 angular.module('ngChatApp')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('ManageCtrl', function ($scope) {
     $scope.awesomeThings = [];
   });
+

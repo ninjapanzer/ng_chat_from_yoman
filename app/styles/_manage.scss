@@ -1,0 +1,82 @@
+.manage--space{
+  background: white;
+  padding: 0.5em;
+}
+
+.manage--widgets{
+  .widget{
+   textarea{
+      width: 100%;
+    }
+    margin-right: 0.7em;
+    width: 32%;
+    float: left;
+    .search-form{
+      color: black;
+      input[type='text']{
+        border-radius: 1em;
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+        width: 100%;
+      }
+      select{
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+        display: inline;
+      }
+      input[type='submit']{
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+        display: inline;
+      }
+    }
+    color: #FDFDFD;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    height: 12em;
+    background: #666666;
+    padding: 0.7em;
+    .body{
+      .title{
+        font-size: 1.2em;
+      }
+      .content{
+        .interaction{
+          display: inline-block;
+          padding-top: 3em;
+          height: 4em;
+        }
+        font-size: 0.7em;
+      }
+      height: 80%;
+      border-bottom: 1px solid #919191;
+    }
+    .footer{
+      padding-top: 0.9em;
+    }
+    .actions{
+      li{
+        display: inline;
+        text-transform: uppercase;
+      }
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      list-style-type: none;
+      font-size: 0.7em;
+      color: #E7A96F;
+    }
+  }
+}
+
+.interaction--title{
+  background: #666666;
+  height: 3em;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  .title{
+    color: white;
+    padding: 0.7em;
+    text-align: center;
+  }
+}

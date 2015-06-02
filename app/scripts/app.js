@@ -23,9 +23,9 @@ angular
         templateUrl: 'views/interaction.html',
         controller: 'InteractionCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/manage', {
+        templateUrl: 'views/manage.html',
+        controller: 'ManageCtrl'
       })
       .otherwise({
         redirectTo: '/'
