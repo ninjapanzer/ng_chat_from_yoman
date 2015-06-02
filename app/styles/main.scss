@@ -11,6 +11,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
+  background: #DDDDDD;
   padding: 0;
 }
 
@@ -57,8 +58,37 @@ body {
   }
 }
 
+.userinfo{
+  height: 4em;
+  margin-bottom: 1em;
+  background: #FFFFFF;
+  .username{
+    float: left;
+    padding: 1.2em;
+  }
+  .badges{
+    float: right;
+    padding: 0.7em;
+    list-style-type: none;
+    li{
+      width: 5em;
+      font-size: 0.7em;
+      margin-bottom: 2px;
+      border-radius: 0.3em;
+      text-align: center;
+    }
+    li.coach{
+      background: #317BE1;
+    }
+    li.premium{
+      background: #FD9828;
+    }
+  }
+}
+
 .header{
   .navbar-header{
+    background: #FFFFFF;
     height: 4em;
     float: none;
     border-bottom: 1px solid black;

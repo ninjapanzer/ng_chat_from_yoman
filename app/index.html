@@ -37,14 +37,18 @@
           </ul>
           <ul class="nav navbar-user navbar-nav"><li><a ng-href="#/profile"><img src='/images/thing.png'/>Adam Coimbra</a></li></ul>
         </div>
-        <div class="container">
-
-        </div>
       </div>
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+      <div class="userinfo">
+        <div class="username">Adam Coimbra</div>
+        <ul class="badges">
+          <li class='coach'>Coach</li>
+          <li class='premium'>Premium</li>
+        </ul>
+      </div>
+      <div ng-view=""></div>
     </div>
 
     <div class="footer">
