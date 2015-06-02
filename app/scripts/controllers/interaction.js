@@ -10,32 +10,50 @@
 
 angular.module('ngChatApp')
   .factory('User', function($resource) {
-    return $resource('http://elymu-api.herokuapp.com/users/:id');
+    return $resource('http://elymu-api.herokuapp.com/users/:id',{callback: "JSON_CALLBACK"},
+    {
+      query: {method:'JSONP', isArray: true}
+    });
   });
 
 angular.module('ngChatApp')
   .factory('Interaction', function($resource) {
-    return $resource('http://elymu-api.herokuapp.com/users/:uid/interactions');
+    return $resource('http://elymu-api.herokuapp.com/users/:uid/interactions',{callback: "JSON_CALLBACK"},
+    {
+      query: {method:'JSONP', isArray: true}
+    });
   });
 
 angular.module('ngChatApp')
   .factory('CoachingTask', function($resource) {
-    return $resource('http://elymu-api.herokuapp.com/users/:uid/coachingTasks');
+    return $resource('http://elymu-api.herokuapp.com/users/:uid/coachingTasks',{callback: "JSON_CALLBACK"},
+    {
+      query: {method:'JSONP', isArray: true}
+    });
   });
 
 angular.module('ngChatApp')
   .factory('Message', function($resource) {
-    return $resource('http://elymu-api.herokuapp.com/threads/:tid/messages');
+    return $resource('http://elymu-api.herokuapp.com/threads/:tid/messages',{callback: "JSON_CALLBACK"},
+    {
+      query: {method:'JSONP', isArray: true}
+    });
   });
 
 angular.module('ngChatApp')
   .factory('Client', function($resource) {
-    return $resource('http://elymu-api.herokuapp.com/client/:id');
+    return $resource('http://elymu-api.herokuapp.com/client/:id',{callback: "JSON_CALLBACK"},
+    {
+      query: {method:'JSONP', isArray: true}
+    });
   });
 
 angular.module('ngChatApp')
   .factory('Thread', function($resource) {
-    return $resource('http://elymu-api.herokuapp.com/interactions/:iid/threads');
+    return $resource('http://elymu-api.herokuapp.com/interactions/:iid/threads',{callback: "JSON_CALLBACK"},
+    {
+      query: {method:'JSONP', isArray: true}
+    });
   });
 
 angular.module('ngChatApp')
@@ -52,6 +70,7 @@ angular.module('ngChatApp')
       }(data);
       $scope.user = data[0];
       Interaction.query({uid: uid}, function(data) {
+        console.log(data);
         $scope.user.interactions = data;
         for(var i=0; i<data.length; i++){
           var iid = $scope.user.interactions[i].id;
